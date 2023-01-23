@@ -2,12 +2,21 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   padding: 1rem 7.75rem;
+
+  @media only screen and (max-width: 900px) {
+    padding: 1.6rem 1.5rem;
+  }
 `;
 export const ContainerHome = styled.main`
   display: flex;
   width: 100%;
-
+  align-items: center;
   gap: 3.1rem;
+
+  @media only screen and (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const ContainerBoasVindas = styled.div`
@@ -57,6 +66,20 @@ export const ContainerBoasVindas = styled.div`
     align-items: center;
     border: none;
   }
+
+  @media only screen and (max-width: 900px) {
+    margin-top: .1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    h1 {
+    margin-top: 1rem;
+
+    font-size: 2.18rem;
+    }
+  }
 `;
 export const ContainerImage = styled.div`
   flex: 1;
@@ -66,9 +89,17 @@ export const ContainerImage = styled.div`
   img {
     width: 100%;
   }
+  @media screen and (max-width: 500px) {
+    img {
+      margin-top: -6rem;
+    }
+  }
 `;
 export const SectionNumbers = styled.div`
-  margin-top: -5rem;
+  margin-top: -3rem;
+  @media only screen and (max-width: 900px) {
+      margin-top: -8rem;
+  }
   flex: 1;
   display: flex;
   align-items: center;
@@ -83,24 +114,46 @@ export const SectionNumbers = styled.div`
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
   div {
-    width: 50%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     flex-direction: column;
     text-align: center;
-    border-right: 1px solid #ff99b6;
 
     span {
       font-weight: normal;
       color: ${(props) => props.theme["pink-100"]};
     }
   }
+  @media only screen and (max-width: 1300px) {
+    padding: 1.6rem 1.5rem;
+  }
+
+  @media only screen and (max-width: 900px) {
+    padding: 1.6rem 1.5rem;
+    display: flex;
+    gap: 3.75rem;
+    flex-direction: column;
+  }
 `;
 export const Number = styled.span`
-  font-weight: 700!important;
+  font-weight: 700 !important;
   font-size: 3rem;
   line-height: 62.4px;
 
   color: ${(props) => props.theme["pink-100"]};
+
+`;
+export const Divider = styled.div`
+  border-right: 2px solid ${(props) => props.theme["pink-100"]};
+  height: 40%;
+  opacity: .5;
+  margin-left: 14%;
+  width: 15%;
+  position: absolute;
+
+  @media only screen and (max-width: 900px){
+    border: none;
+  }
+  
 `;

@@ -9,12 +9,13 @@ import {
   ContainerImage,
   SectionNumbers,
   Container,
-  Number
+  Number,
+  Divider
 } from "../styles/home/styles";
 import { defaultTheme } from "../styles/themes/default";
 
 import Image from "next/image";
-import logoignite from "../assets/image.svg";
+import Modelo from "../assets/modelo.svg";
 
 export default function Home() {
   const [menuIsVisible, setMenuIsVisible] = useState(false);
@@ -38,17 +39,19 @@ export default function Home() {
           <button>AGENDE SUA CONSULTA</button>
         </ContainerBoasVindas>
         <ContainerImage>
-          <Image src={logoignite} alt="modelo" width={520} />
+          <Image src={Modelo} alt="modelo" width={520} />
         </ContainerImage>
       </ContainerHome>
       <SectionNumbers>
         <div>
           <Number>+3.500</Number>
           <span>Pacientes atendidos</span>
+          <Divider />
         </div>
         <div>
           <Number>+15</Number>
           <span>Especialistas disponíveis</span>
+          <Divider />
         </div>
         <div>
           <Number>+10</Number>

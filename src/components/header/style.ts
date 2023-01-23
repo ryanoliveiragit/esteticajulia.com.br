@@ -83,7 +83,7 @@ export const ContainerHeader = styled.header`
     }
   }
   @media only screen and (max-width: 900px) {
-    ul > li {
+    a {
       display: none;
     }
     svg {
