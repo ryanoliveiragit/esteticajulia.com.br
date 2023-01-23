@@ -16,6 +16,9 @@ export const ContainerHeader = styled.header`
 
   background-color: ${(props) => props.theme.white};
   width: 100%;
+  @media only screen and (max-width: 900px) {
+    position: fixed;
+  }
 
   nav {
     display: flex;
