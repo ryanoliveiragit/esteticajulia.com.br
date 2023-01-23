@@ -1,5 +1,9 @@
-import { ContainerHeader, TitleJu, TitleLia } from "./style";
+import { ContainerHeader, ContainerIcons, TitleJu, TitleLia } from "./style";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { AiOutlineInstagram } from "react-icons/ai";
+import { FiFacebook } from "react-icons/fi";
+import { AiOutlineYoutube } from "react-icons/ai";
+
 
 export function Header({ setMenuIsVisible }: any) {
 

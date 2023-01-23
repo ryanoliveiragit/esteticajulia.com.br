@@ -20,12 +20,12 @@ export const Container = styled.div`
   opacity: 0;
   pointer-events: none;
   h1 {
-        font-size: 1rem;
-        position: absolute;
-        left: 1rem;
-        top: 1.5rem;
-        color: ${(props) => props.theme.white};
-    }
+    font-size: 1rem;
+    position: absolute;
+    left: 1rem;
+    top: 1.5rem;
+    color: ${(props) => props.theme.white};
+  }
   > svg {
     fill: ${(props) => props.theme.white};
     position: absolute;
@@ -51,7 +51,7 @@ export const Container = styled.div`
 
       gap: 3rem;
 
-      color: ${(props => props.theme.white)};
+      color: ${(props) => props.theme.white};
     }
 
     div {
@@ -66,12 +66,10 @@ export const Container = styled.div`
       border: 1px solid ${(props) => props.theme.pink};
       color: ${(props) => props.theme.pink};
 
-      font-weight: normal;
+      font-weight: 700;
       font-size: 0.87rem;
-
-      line-height: 18px;
-
       cursor: pointer;
+      line-height: 23px;
     }
   }
 

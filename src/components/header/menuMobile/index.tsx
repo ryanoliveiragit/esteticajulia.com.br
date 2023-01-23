@@ -1,5 +1,12 @@
 import { Container } from "./styles";
 import { IoClose } from "react-icons/io5";
+import { ContainerIcons } from "../style";
+
+import { AiOutlineInstagram } from "react-icons/ai";
+import { FiFacebook } from "react-icons/fi";
+import { AiOutlineYoutube } from "react-icons/ai";
+
+import Link from 'next/link'
 
 interface MenuMobileProps {
   menuIsVisible: any;
@@ -21,7 +28,12 @@ export function MenuMobile({
           <li>Serviços</li>
           <li>Depoimentos</li>
         </ul>
-        <button>AGENDAR CONSULTA</button>
+        <button>AGENDE SUA CONSULTA</button>
+        <ContainerIcons>
+          <Link href={'/'}><AiOutlineInstagram /></Link>
+          <Link href={'/'}><FiFacebook /></Link>
+          <Link href={'/'}><AiOutlineYoutube /></Link>
+        </ContainerIcons>
       </nav>
     </Container>
   );

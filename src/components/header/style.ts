@@ -39,8 +39,8 @@ export const ContainerHeader = styled.header`
       }
     }
     svg {
-        display: none;
-        cursor: pointer;
+      display: none;
+      cursor: pointer;
     }
     button {
       background-color: ${(props) => props.theme.white};
@@ -63,11 +63,21 @@ export const ContainerHeader = styled.header`
       display: none;
     }
     svg {
-        display: block!important;
-      }
+      display: block !important;
+    }
     button {
       display: none;
     }
     padding: 1.6rem 1.5rem;
+  }
+`;
+export const ContainerIcons = styled.div`
+  margin-top: 3rem;
+
+  font-size: 1.5rem;
+  gap: 2rem;
+
+  a {
+    color: white;
   }
 `;
