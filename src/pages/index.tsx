@@ -20,6 +20,12 @@ import Modelo from "../assets/modelo.svg";
 export default function Home() {
   const [menuIsVisible, setMenuIsVisible] = useState(false);
 
+  function contact() {
+    window.open(
+      "https://api.whatsapp.com/send/?phone=551197363973&text&type=phone_number&app_absent=0"
+    );
+  }
+
   return (
     <ThemeProvider theme={defaultTheme}>
       <MenuMobile
@@ -36,7 +42,7 @@ export default function Home() {
             De ao seu corpo o cuidado que ele realmente merece! Com
             perfeccionismo e dedicação
           </p>
-          <button>AGENDE SUA CONSULTA</button>
+          <button onClick={contact}>AGENDE SUA CONSULTA</button>
         </ContainerBoasVindas>
         <ContainerImage>
           <Image src={Modelo} alt="modelo" width={520} />

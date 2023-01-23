@@ -51,6 +51,8 @@ export const ContainerBoasVindas = styled.div`
     color: ${(props) => props.theme["gray-700"]};
   }
   button {
+    cursor: pointer;
+
     margin-top: 2rem;
     gap: 0.9rem;
     padding: 1rem 2rem;
@@ -65,6 +67,12 @@ export const ContainerBoasVindas = styled.div`
     justify-content: center;
     align-items: center;
     border: none;
+
+    transition: all .3s;
+    :hover {
+      background-color: ${(props) => props.theme["pink-100"]};
+      color: ${(props) => props.theme.white};
+    }
   }
 
   @media only screen and (max-width: 900px) {
@@ -75,9 +83,9 @@ export const ContainerBoasVindas = styled.div`
     text-align: center;
 
     h1 {
-    margin-top: 1rem;
+      margin-top: 1rem;
 
-    font-size: 2.18rem;
+      font-size: 2.18rem;
     }
   }
 `;
@@ -98,7 +106,7 @@ export const ContainerImage = styled.div`
 export const SectionNumbers = styled.div`
   margin-top: -3rem;
   @media only screen and (max-width: 900px) {
-      margin-top: -8rem;
+    margin-top: -8rem;
   }
   flex: 1;
   display: flex;
@@ -142,18 +150,16 @@ export const Number = styled.span`
   line-height: 62.4px;
 
   color: ${(props) => props.theme["pink-100"]};
-
 `;
 export const Divider = styled.div`
   border-right: 2px solid ${(props) => props.theme["pink-100"]};
   height: 40%;
-  opacity: .5;
+  opacity: 0.5;
   margin-left: 14%;
   width: 15%;
   position: absolute;
 
-  @media only screen and (max-width: 900px){
+  @media only screen and (max-width: 900px) {
     border: none;
   }
-  
 `;

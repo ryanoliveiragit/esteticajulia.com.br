@@ -17,6 +17,12 @@ export function MenuMobile({
   menuIsVisible,
   setMenuIsVisible,
 }: MenuMobileProps) {
+
+  function contact() {
+    window.open(
+      "https://api.whatsapp.com/send/?phone=551197363973&text&type=phone_number&app_absent=0"
+    );
+  }
   return (
     <Container isVisible={menuIsVisible}>
       <IoClose onClick={() => setMenuIsVisible(false)} size={25} />
@@ -28,7 +34,7 @@ export function MenuMobile({
           <li>Serviços</li>
           <li>Depoimentos</li>
         </ul>
-        <button>AGENDE SUA CONSULTA</button>
+        <button onClick={contact}>AGENDE SUA CONSULTA</button>
         <ContainerIcons>
           <Link href={'/'}><AiOutlineInstagram /></Link>
           <Link href={'/'}><FiFacebook /></Link>
