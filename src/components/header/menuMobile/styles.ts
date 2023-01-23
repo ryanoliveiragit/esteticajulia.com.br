@@ -19,6 +19,8 @@ export const Container = styled.div`
 
   opacity: 0;
   pointer-events: none;
+
+  transition: 0.2s ease-in;
   h1 {
     font-size: 1rem;
     position: absolute;

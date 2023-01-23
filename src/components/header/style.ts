@@ -31,12 +31,29 @@ export const ContainerHeader = styled.header`
       display: flex;
       gap: 32px;
 
-      li {
-        color: ${(props) => props.theme.pink};
-        list-style: none;
 
-        cursor: pointer;
-      }
+        a {
+          color: ${(props) => props.theme.pink};
+          list-style: none;
+          position: relative;
+          text-decoration: none;
+
+          padding: 0 10px;
+          cursor: pointer;
+        }
+        a:after {
+          content: "";
+          position: absolute;
+          background-color: ${(props) => props.theme.pink};
+          height: 3px;
+          width: 0%;
+          left: 0;
+          bottom: -10px;
+          transition: 0.3s;
+        }
+        a:hover:after {
+          width: 100%;
+        }
     }
     svg {
       display: none;
@@ -55,10 +72,17 @@ export const ContainerHeader = styled.header`
 
       line-height: 18px;
 
+      transition: all .3s;
+
       cursor: pointer;
+      :hover {
+        background-color: ${(props) => props.theme.pink};
+        color: ${(props) => props.theme.white};
+
+      }
     }
   }
-  @media only screen and (max-width: 870px) {
+  @media only screen and (max-width: 900px) {
     ul > li {
       display: none;
     }
@@ -76,7 +100,6 @@ export const ContainerIcons = styled.div`
 
   font-size: 1.5rem;
   gap: 2rem;
-
   a {
     color: white;
   }

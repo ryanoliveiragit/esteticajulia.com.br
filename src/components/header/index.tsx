@@ -1,11 +1,13 @@
 import { ContainerHeader, ContainerIcons, TitleJu, TitleLia } from "./style";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { AiOutlineInstagram } from "react-icons/ai";
-import { FiFacebook } from "react-icons/fi";
-import { AiOutlineYoutube } from "react-icons/ai";
-
+import Link from "next/link";
 
 export function Header({ setMenuIsVisible }: any) {
+  function contact() {
+    window.open(
+      "https://api.whatsapp.com/send/?phone=551197363973&text&type=phone_number&app_absent=0"
+    );
+  }
 
   return (
     <ContainerHeader>
@@ -15,12 +17,12 @@ export function Header({ setMenuIsVisible }: any) {
           <TitleLia>lia</TitleLia>
         </div>
         <ul>
-          <li>Início</li>
-          <li>Sobre</li>
-          <li>Serviços</li>
-          <li>Depoimentos</li>
+          <Link href={"/"}>Início</Link>
+          <Link href={"/"}>Sobre</Link>
+          <Link href={"/"}>Serviços</Link>
+          <Link href={"/"}>Depoimentos</Link>
         </ul>
-        <button>AGENDAR CONSULTA</button>
+        <button onClick={contact}>AGENDAR CONSULTA</button>
         <RxHamburgerMenu
           onClick={() => setMenuIsVisible(true)}
         ></RxHamburgerMenu>
