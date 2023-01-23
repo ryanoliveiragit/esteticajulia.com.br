@@ -75,7 +75,7 @@ export const Container = styled.div`
     }
   }
 
-  ${({ isVisible }: any) =>
+  ${({ isVisible }: {isVisible : any} ) =>
     isVisible &&
     css`
       opacity: 1;

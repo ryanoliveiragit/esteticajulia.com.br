@@ -9,7 +9,7 @@ import { AiOutlineYoutube } from "react-icons/ai";
 import Link from 'next/link'
 
 interface MenuMobileProps {
-  menuIsVisible: any;
+  menuIsVisible: boolean;
   setMenuIsVisible: any;
 }
 
