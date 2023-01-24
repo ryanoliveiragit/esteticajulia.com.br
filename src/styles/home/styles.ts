@@ -100,6 +100,7 @@ export const ContainerImage = styled.div`
   @media screen and (max-width: 500px) {
     img {
       margin-top: -6rem;
+      z-index: -1;
     }
   }
 `;
