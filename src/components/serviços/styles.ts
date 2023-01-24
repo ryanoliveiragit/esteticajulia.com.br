@@ -62,6 +62,16 @@ export const Cards = styled.div`
     width: 100%;
     padding: 1.5rem;
     background-color: ${(props) => props.theme.white};
+
+    border: 2px solid ${(props) => props.theme.white};
+    transition: all .2s;
+
+    :hover {
+      cursor: pointer;
+
+      border: 2px solid ${(props) => props.theme["pink-100"]};
+    }
+
     svg {
       width: 1.5rem;
       color: ${(props) => props.theme.pink};

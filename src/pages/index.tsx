@@ -17,9 +17,12 @@ import { defaultTheme } from "../styles/themes/default";
 import Image from "next/image";
 import Modelo from "../assets/modelo.svg";
 import { Servicos } from "../components/serviços";
+import { MyContext } from "../components/context/MyContext";
 
 export default function Home() {
   const [menuIsVisible, setMenuIsVisible] = useState(false);
+
+  const [open, setOpen] = useState(false);
 
   function contact() {
     window.open(
@@ -34,6 +37,7 @@ export default function Home() {
         setMenuIsVisible={setMenuIsVisible}
       />
       <Header setMenuIsVisible={setMenuIsVisible} />
+      <MyContext.Provider value={{open, setOpen}}>
       <Container>
         <ContainerHome>
           <ContainerBoasVindas>
@@ -67,6 +71,7 @@ export default function Home() {
         </SectionNumbers>
       </Container>
       <Servicos />
+      </MyContext.Provider>
     </ThemeProvider>
   );
 }
