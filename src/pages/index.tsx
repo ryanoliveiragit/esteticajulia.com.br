@@ -10,12 +10,13 @@ import {
   SectionNumbers,
   Container,
   Number,
-  Divider
+  Divider,
 } from "../styles/home/styles";
 import { defaultTheme } from "../styles/themes/default";
 
 import Image from "next/image";
 import Modelo from "../assets/modelo.svg";
+import { Servicos } from "../components/serviços";
 
 export default function Home() {
   const [menuIsVisible, setMenuIsVisible] = useState(false);
@@ -34,37 +35,38 @@ export default function Home() {
       />
       <Header setMenuIsVisible={setMenuIsVisible} />
       <Container>
-      <ContainerHome>
-        <ContainerBoasVindas>
-          <span>BOAS-VINDAS 👋</span>
-          <h1>Essência da beleza natural</h1>
-          <p>
-            De ao seu corpo o cuidado que ele realmente merece! Com
-            perfeccionismo e dedicação
-          </p>
-          <button onClick={contact}>AGENDE SUA CONSULTA</button>
-        </ContainerBoasVindas>
-        <ContainerImage>
-          <Image src={Modelo} alt="modelo" width={520} />
-        </ContainerImage>
-      </ContainerHome>
-      <SectionNumbers>
-        <div>
-          <Number>+3.500</Number>
-          <span>Pacientes atendidos</span>
-          <Divider />
-        </div>
-        <div>
-          <Number>+15</Number>
-          <span>Especialistas disponíveis</span>
-          <Divider />
-        </div>
-        <div>
-          <Number>+10</Number>
-          <span>Anos no mercado</span>
-        </div>
-      </SectionNumbers>
+        <ContainerHome>
+          <ContainerBoasVindas>
+            <span>BOAS-VINDAS 👋</span>
+            <h1>Essência da beleza natural</h1>
+            <p>
+              De ao seu corpo o cuidado que ele realmente merece! Com
+              perfeccionismo e dedicação
+            </p>
+            <button onClick={contact}>AGENDE SUA CONSULTA</button>
+          </ContainerBoasVindas>
+          <ContainerImage>
+            <Image src={Modelo} alt="modelo" width={520} />
+          </ContainerImage>
+        </ContainerHome>
+        <SectionNumbers>
+          <div>
+            <Number>+3.500</Number>
+            <span>Pacientes atendidos</span>
+            <Divider />
+          </div>
+          <div>
+            <Number>+15</Number>
+            <span>Especialistas disponíveis</span>
+            <Divider />
+          </div>
+          <div>
+            <Number>+10</Number>
+            <span>Anos no mercado</span>
+          </div>
+        </SectionNumbers>
       </Container>
+      <Servicos />
     </ThemeProvider>
   );
 }
