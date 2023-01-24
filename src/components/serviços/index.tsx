@@ -15,7 +15,7 @@ export function Servicos() {
         <h1>Como podemos ajudá-lo a se sentir melhor?</h1>
       </Content>
       <Cards data-aos="fade-up">
-        <div>
+        <div data-aos="fade-up">
           <GoCheck />
           <h1>Problemas digestivos</h1>
           <p>
@@ -23,7 +23,7 @@ export function Servicos() {
             sint. Velit officia consequat duis enim.
           </p>
         </div>
-        <div>
+        <div data-aos="fade-up">
           <GoCheck />
           <h1>Problemas digestivos</h1>
           <p>
@@ -31,7 +31,7 @@ export function Servicos() {
             sint. Velit officia consequat duis enim.
           </p>
         </div>
-        <div>
+        <div data-aos="fade-up">
           <GoCheck />
           <h1>Problemas digestivos</h1>
           <p>
@@ -41,7 +41,7 @@ export function Servicos() {
         </div>
       </Cards>
       <Cards data-aos="fade-up">
-        <div>
+        <div data-aos="fade-up">
           <GoCheck />
           <h1>Problemas digestivos</h1>
           <p>
@@ -49,7 +49,7 @@ export function Servicos() {
             sint. Velit officia consequat duis enim.
           </p>
         </div>
-        <div>
+        <div data-aos="fade-up">
           <GoCheck />
           <h1>Problemas digestivos</h1>
           <p>
@@ -57,7 +57,7 @@ export function Servicos() {
             sint. Velit officia consequat duis enim.
           </p>
         </div>
-        <div>
+        <div data-aos="fade-up">
           <GoCheck />
           <h1>Problemas digestivos</h1>
           <p>

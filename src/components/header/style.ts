@@ -14,6 +14,7 @@ export const TitleLia = styled.h1`
 export const ContainerHeader = styled.header`
   padding: 1.5rem 7.75rem;
 
+  z-index: 10;
   background-color: ${(props) => props.theme.white};
   width: 100%;
   @media only screen and (max-width: 900px) {
