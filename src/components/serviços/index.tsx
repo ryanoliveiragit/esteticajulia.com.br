@@ -1,16 +1,20 @@
-
 import { GoCheck } from "react-icons/go";
 import { Container, Content, Cards } from "./styles";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export function Servicos() {
-
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   return (
     <Container>
-      <Content>
+      <Content data-aos="fade-up">
         <span>SERVIÇOS</span>
         <h1>Como podemos ajudá-lo a se sentir melhor?</h1>
       </Content>
-      <Cards>
+      <Cards data-aos="fade-up">
         <div>
           <GoCheck />
           <h1>Problemas digestivos</h1>
@@ -36,7 +40,7 @@ export function Servicos() {
           </p>
         </div>
       </Cards>
-      <Cards>
+      <Cards data-aos="fade-up">
         <div>
           <GoCheck />
           <h1>Problemas digestivos</h1>
