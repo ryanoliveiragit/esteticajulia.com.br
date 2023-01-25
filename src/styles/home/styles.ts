@@ -76,7 +76,6 @@ export const ContainerBoasVindas = styled.div`
   }
 
   @media only screen and (max-width: 900px) {
-    margin-top: 2.1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
