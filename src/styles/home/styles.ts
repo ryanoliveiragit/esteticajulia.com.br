@@ -164,3 +164,37 @@ export const Divider = styled.div`
     border: none;
   }
 `;
+
+export const Content = styled.div`
+  width: 31rem;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+
+  @media screen and (max-width: 900px) {
+    margin-top: 6.25rem;
+    width: 100%;
+  }
+
+  span {
+    color: ${(props) => props.theme.pink};
+    font-size: 0.85rem;
+    line-height: 21px;
+    letter-spacing: 8%;
+    font-weight: 700;
+  }
+  h1 {
+    line-height: 52px;
+    font-weight: 700;
+    font-size: 2.5rem;
+
+    @media screen and (max-width: 900px) {
+      font-size: 2rem;
+      line-height: 39px;
+    }
+  }
+`;

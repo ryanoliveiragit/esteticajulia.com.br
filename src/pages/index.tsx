@@ -22,6 +22,11 @@ import { Servicos } from "../components/serviços";
 import { MyContext } from "../components/context/MyContext";
 
 export default function Home() {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   const [menuIsVisible, setMenuIsVisible] = useState(false);
 
   const [open, setOpen] = useState(false);
@@ -31,9 +36,6 @@ export default function Home() {
       "https://api.whatsapp.com/send/?phone=551197363973&text&type=phone_number&app_absent=0"
     );
   }
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
 
   return (
     <ThemeProvider theme={defaultTheme}>
@@ -41,10 +43,13 @@ export default function Home() {
         menuIsVisible={menuIsVisible}
         setMenuIsVisible={setMenuIsVisible}
       />
-      <Header setMenuIsVisible={setMenuIsVisible} />
+      <Header
+        setMenuIsVisible={setMenuIsVisible}
+      />
       <MyContext.Provider value={{ open, setOpen }}>
         <Container data-aos='fade-up'>
           <ContainerHome>
+
             <ContainerBoasVindas>
               <span>BOAS-VINDAS 👋</span>
               <h1>Essência da beleza natural</h1>
@@ -52,12 +57,18 @@ export default function Home() {
                 De ao seu corpo o cuidado que ele realmente merece! Com
                 perfeccionismo e dedicação
               </p>
-              <button onClick={contact}>AGENDE SUA CONSULTA</button>
+              <button 
+                onClick={contact}>
+                AGENDE SUA CONSULTA
+              </button>
             </ContainerBoasVindas>
+
             <ContainerImage>
               <Image src={Modelo} alt="modelo" width={520} />
             </ContainerImage>
+
           </ContainerHome>
+          
           <SectionNumbers>
             <div>
               <Number>+3.500</Number>
@@ -75,7 +86,7 @@ export default function Home() {
             </div>
           </SectionNumbers>
         </Container>
-        <Servicos data-aos='fade-right' />
+        <Servicos />
       </MyContext.Provider>
     </ThemeProvider>
   );
