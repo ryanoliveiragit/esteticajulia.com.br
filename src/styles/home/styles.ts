@@ -25,7 +25,7 @@ export const ContainerBoasVindas = styled.div`
   margin-top: 5.9rem;
   max-width: 605px;
   @media only screen and (max-width: 900px) {
-      margin-top: 0rem;
+      margin-top: 1.5rem;
     }
 
   span {
