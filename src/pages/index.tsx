@@ -45,7 +45,7 @@ export default function Home() {
       />
       <Header setMenuIsVisible={setMenuIsVisible} />
       <MyContext.Provider value={{ open, setOpen }}>
-        <Container data-aos="fade-up">
+        <Container id="Inicio" data-aos="fade-up">
           <ContainerHome>
             <ContainerBoasVindas>
               <span>BOAS-VINDAS 👋</span>

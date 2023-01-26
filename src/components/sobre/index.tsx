@@ -17,7 +17,7 @@ export function Sobre() {
     <ContainerSobre>
       <ContentSobre>
       <Image data-aos="fade-up" src={Modelo} alt="modelo" width={500} />
-        <section data-aos="fade-up">
+        <section id="Sobre" data-aos="fade-up">
           <span>SOBRE NÓS</span>
           <h1>Entenda quem somos e por que existimos</h1>
           <p>

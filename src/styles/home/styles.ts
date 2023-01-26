@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding: 1rem 7.75rem;
+  padding: 0rem 7.75rem;
 
   @media only screen and (max-width: 900px) {
     padding: 1.6rem 1.5rem;
@@ -9,6 +9,7 @@ export const Container = styled.div`
 `;
 export const ContainerHome = styled.main`
   display: flex;
+  padding-top: 5rem;
   width: 100%;
   align-items: center;
   gap: 3.1rem;

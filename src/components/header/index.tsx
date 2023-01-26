@@ -1,6 +1,13 @@
 import { ContainerHeader, ContainerIcons, TitleJu, TitleLia } from "./style";
 import { RxHamburgerMenu } from "react-icons/rx";
-import Link from "next/link";
+import { NAV_LINKS } from "../../utils/NAV_LINKS";
+import { Link } from "react-scroll";
+
+import { animateScroll as scroll } from "react-scroll";
+
+function handleClick() {
+  scroll.scrollToTop();
+}
 
 export function Header({ setMenuIsVisible }: any) {
   function contact() {
@@ -8,7 +15,6 @@ export function Header({ setMenuIsVisible }: any) {
       "https://api.whatsapp.com/send/?phone=551197363973&text&type=phone_number&app_absent=0"
     );
   }
-
   return (
     <ContainerHeader>
       <nav>
@@ -17,10 +23,20 @@ export function Header({ setMenuIsVisible }: any) {
           <TitleLia>lia</TitleLia>
         </div>
         <ul>
-          <Link href={"/"}>Início</Link>
-          <Link href={"/"}>Sobre</Link>
-          <Link href={"/"}>Serviços</Link>
-          <Link href={"/"}>Depoimentos</Link>
+          <li onClick={handleClick}>Inicio</li>
+          {NAV_LINKS.map((itens) => {
+            return (
+                <Link
+                  key={itens.id}
+                  to={itens.title}
+                  smooth={true}
+                  offset={200}
+                  duration={500}
+                >
+                  {itens.title}
+                </Link>
+            );
+          })}
         </ul>
         <button onClick={contact}>AGENDAR CONSULTA</button>
         <RxHamburgerMenu

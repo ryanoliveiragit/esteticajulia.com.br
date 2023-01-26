@@ -17,9 +17,8 @@ export const ContainerHeader = styled.header`
   z-index: 10;
   background-color: ${(props) => props.theme.white};
   width: 100%;
-  @media only screen and (max-width: 900px) {
-    position: fixed;
-  }
+
+  position: fixed;
 
   nav {
     display: flex;
@@ -34,16 +33,38 @@ export const ContainerHeader = styled.header`
     ul {
       display: flex;
       gap: 32px;
+      list-style: none;
 
-      a {
-        color: ${(props) => props.theme.pink};
+      li,a{
         list-style: none;
         position: relative;
         text-decoration: none;
 
         padding: 0 10px;
         cursor: pointer;
+
+        color: ${(props) => props.theme.pink};
+
+        li,a {
+          list-style: none;
+          text-decoration: none;
+          color: ${(props) => props.theme.pink};
+        }
       }
+      li:after {
+        content: "";
+        position: absolute;
+        background-color: ${(props) => props.theme.pink};
+        height: 3px;
+        width: 0%;
+        left: 0;
+        bottom: -10px;
+        transition: 0.3s;
+      }
+      li:hover:after {
+        width: 100%;
+      }
+
       a:after {
         content: "";
         position: absolute;

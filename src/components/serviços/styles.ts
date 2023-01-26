@@ -30,6 +30,7 @@ export const Content = styled.div`
   }
 
   span {
+    margin-top: 4rem;
     color: ${(props) => props.theme.pink};
     font-size: 0.85rem;
     line-height: 21px;
