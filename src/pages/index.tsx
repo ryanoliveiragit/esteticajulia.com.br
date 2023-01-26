@@ -20,9 +20,9 @@ import Image from "next/image";
 import Modelo from "../assets/modelo.svg";
 import { Servicos } from "../components/serviços";
 import { MyContext } from "../components/context/MyContext";
+import { Sobre } from "../components/sobre";
 
 export default function Home() {
-
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
@@ -43,13 +43,10 @@ export default function Home() {
         menuIsVisible={menuIsVisible}
         setMenuIsVisible={setMenuIsVisible}
       />
-      <Header
-        setMenuIsVisible={setMenuIsVisible}
-      />
+      <Header setMenuIsVisible={setMenuIsVisible} />
       <MyContext.Provider value={{ open, setOpen }}>
-        <Container data-aos='fade-up'>
+        <Container data-aos="fade-up">
           <ContainerHome>
-
             <ContainerBoasVindas>
               <span>BOAS-VINDAS 👋</span>
               <h1>Essência da beleza natural</h1>
@@ -57,18 +54,14 @@ export default function Home() {
                 De ao seu corpo o cuidado que ele realmente merece! Com
                 perfeccionismo e dedicação
               </p>
-              <button 
-                onClick={contact}>
-                AGENDE SUA CONSULTA
-              </button>
+              <button onClick={contact}>AGENDE SUA CONSULTA</button>
             </ContainerBoasVindas>
 
             <ContainerImage>
               <Image src={Modelo} alt="modelo" width={520} />
             </ContainerImage>
-
           </ContainerHome>
-          
+
           <SectionNumbers>
             <div>
               <Number>+3.500</Number>
@@ -87,6 +80,7 @@ export default function Home() {
           </SectionNumbers>
         </Container>
         <Servicos />
+        <Sobre />
       </MyContext.Provider>
     </ThemeProvider>
   );
