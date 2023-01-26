@@ -109,6 +109,7 @@ export const ContainerImage = styled.div`
   }
 `;
 export const SectionNumbers = styled.div`
+max-width: 100rem;
   margin-top: -3rem;
   @media only screen and (max-width: 900px) {
     margin-top: -8rem;
@@ -124,7 +125,7 @@ export const SectionNumbers = styled.div`
 
   box-sizing: border-box;
   background-color: ${(props) => props.theme["purple-50"]};
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.10));
 
   div {
     display: flex;

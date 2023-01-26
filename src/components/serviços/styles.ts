@@ -15,6 +15,7 @@ export const Container = styled.div`
   }
 `;
 export const Content = styled.div`
+margin-top: 4rem;
   width: 31rem;
   margin-bottom: 4rem;
   display: flex;
