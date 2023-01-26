@@ -8,7 +8,7 @@ export const ContainerSobre = styled.div`
   justify-content: center;
 `;
 export const ContentSobre = styled.div`
-  padding: 10rem 7.6rem;
+  padding: 10rem 0rem;
   display: flex;
   gap: 4.1rem;
 

@@ -21,6 +21,7 @@ import Modelo from "../assets/modelo.svg";
 import { Servicos } from "../components/serviços";
 import { MyContext } from "../components/context/MyContext";
 import { Sobre } from "../components/sobre";
+import { Contato } from "../components/contato";
 
 export default function Home() {
   useEffect(() => {
@@ -81,6 +82,7 @@ export default function Home() {
         </Container>
         <Servicos />
         <Sobre />
+        <Contato />
       </MyContext.Provider>
     </ThemeProvider>
   );
