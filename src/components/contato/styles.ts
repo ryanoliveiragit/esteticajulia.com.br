@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContainerContato = styled.div`
   display: flex;
   gap: 8.8rem;
-  padding: 5rem 7.5rem;
+  padding: 10rem 7.5rem;
   align-items: center;
   justify-content: space-around;
 
@@ -29,10 +29,20 @@ export const ContentContact = styled.div`
   flex-direction: column;
   gap: 1rem;
 
-  max-width: 25rem;
+  div {
+    gap: .5rem;
+    align-items: center;
+    display: flex;
+    text-align: center;
+
+    svg {
+        color: pink;
+        fill: pink;
+    }
+  }
 
   h1 {
-    max-width: 18rem;
+    max-width: 25rem;
     font-size: 2.5rem;
     line-height: 52px;
     font-weight: 700;

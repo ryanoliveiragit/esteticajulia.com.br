@@ -22,6 +22,7 @@ import { Servicos } from "../components/serviços";
 import { MyContext } from "../components/context/MyContext";
 import { Sobre } from "../components/sobre";
 import { Contato } from "../components/contato";
+import { Footer } from "../components/footer";
 
 export default function Home() {
   useEffect(() => {
@@ -83,6 +84,7 @@ export default function Home() {
         <Servicos />
         <Sobre />
         <Contato />
+        <Footer />
       </MyContext.Provider>
     </ThemeProvider>
   );
