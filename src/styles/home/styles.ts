@@ -24,6 +24,9 @@ export const ContainerBoasVindas = styled.div`
   flex: 1;
   margin-top: 5.9rem;
   max-width: 605px;
+  @media only screen and (max-width: 900px) {
+      margin-top: 0rem;
+    }
 
   span {
     font-size: 0.85rem;
@@ -75,6 +78,7 @@ export const ContainerBoasVindas = styled.div`
       color: ${(props) => props.theme.white};
     }
   }
+
 
   @media only screen and (max-width: 900px) {
     display: flex;
