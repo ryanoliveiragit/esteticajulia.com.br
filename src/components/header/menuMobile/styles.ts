@@ -55,7 +55,52 @@ export const Container = styled.div`
 
       color: ${(props) => props.theme.white};
 
-      
+      li,
+      a {
+        list-style: none;
+        position: relative;
+        text-decoration: none;
+
+        padding: 0 10px;
+        cursor: pointer;
+
+        color: ${(props) => props.theme.white};
+
+        li,
+        a {
+          list-style: none;
+          text-decoration: none;
+          color: ${(props) => props.theme.white};
+        }
+      }
+      li:after {
+        content: "";
+        position: absolute;
+        background-color: ${(props) => props.theme.white};
+        height: 3px;
+        width: 0%;
+        left: 0;
+        bottom: -10px;
+        transition: 0.3s;
+      }
+      li:hover:after {
+        width: 100%;
+      }
+
+      a:after {
+        content: "";
+        position: absolute;
+        background-color: ${(props) => props.theme.white};
+        height: 3px;
+        width: 0%;
+        left: 0;
+        bottom: -10px;
+        transition: 0.3s;
+      }
+      a:hover:after {
+        width: 100%;
+      }
+    }
     }
 
     div {
@@ -75,9 +120,8 @@ export const Container = styled.div`
       cursor: pointer;
       line-height: 23px;
     }
-  }
 
-  ${({ isVisible }: {isVisible : any} ) =>
+  ${({ isVisible }: { isVisible: any }) =>
     isVisible &&
     css`
       opacity: 1;

@@ -13,7 +13,11 @@ export function Contato() {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
-
+  function contact() {
+    window.open(
+      "https://api.whatsapp.com/send/?phone=551197363973&text&type=phone_number&app_absent=0"
+    );
+  }
   return (
     <ContainerContato>
       <ContentContact data-aos="fade-up">
@@ -26,7 +30,7 @@ export function Contato() {
           <MdOutlineMail size={20}/>
           <span>contato@contato.com</span>
         </div>
-        <button>AGENDE SUA CONSULTA</button>
+        <button onClick={contact}>AGENDE SUA CONSULTA</button>
       </ContentContact>
       <Image data-aos="fade-up" src={Modelo} alt="modelo" width={600} />
     </ContainerContato>

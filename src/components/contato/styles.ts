@@ -15,12 +15,16 @@ export const ContainerContato = styled.div`
 
     gap: 3.75rem;
     padding: 5rem 1.5rem;
-    flex-direction: column;
 
     img {
       width: 20rem;
       height: 15rem;
     }
+  }
+
+  @media screen and (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
   }
 `;
 
@@ -72,6 +76,12 @@ export const ContentContact = styled.div`
     line-height: 14px;
 
     max-width: 16rem;
+    transition: all .3s;
+    cursor: pointer;
+    :hover {
+      background-color: ${(props) => props.theme["pink-100"]};
+      color: ${(props) => props.theme.white};
+    }
   }
   @media screen and (max-width: 900px) {
     

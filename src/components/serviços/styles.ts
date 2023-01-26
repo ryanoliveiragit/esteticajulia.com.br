@@ -10,7 +10,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-around;
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1300px) {
     padding: 1.6rem 1.5rem;
   }
 `;

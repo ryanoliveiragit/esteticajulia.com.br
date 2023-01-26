@@ -6,16 +6,33 @@ export const ContainerSobre = styled.div`
   align-items: center;
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: 900px) {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    padding: 0rem 1rem;
+    gap: 4rem;
+    }
+
 `;
 export const ContentSobre = styled.div`
   padding: 10rem 0rem;
+  align-items: center;
   display: flex;
   gap: 4.1rem;
 
-  @media screen and (max-width: 900px) {
-    flex-direction: column-reverse;
+  @media screen and (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
     padding: 0rem 1rem;
-    gap: 0.5rem;
+    gap: 4rem;
+    }
+
+  @media screen and (max-width: 900px) {
+    padding: 0rem 1rem;
+    gap: 4rem;
 
     img {
       width: 20rem;
