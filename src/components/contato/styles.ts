@@ -1,49 +1,76 @@
 import styled from "styled-components";
 
 export const ContainerContato = styled.div`
-    background-color: red;
+  display: flex;
+  gap: 8.8rem;
+  padding: 5rem 7.5rem;
+  align-items: center;
+  justify-content: space-around;
+
+  img {
+    border-radius: 11px;
+  }
+  @media screen and (max-width: 900px) {
     display: flex;
-    gap: 8.8rem;
-    padding: 10rem 7.5rem;
-`
+
+    gap: 3.75rem;
+    padding: 5rem 1.5rem;
+    flex-direction: column;
+
+    img {
+      width: 20rem;
+      height: 15rem;
+    }
+  }
+`;
 
 export const ContentContact = styled.div`
-    background-color: blue;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  max-width: 25rem;
+
+  h1 {
+    max-width: 18rem;
+    font-size: 2.5rem;
+    line-height: 52px;
+    font-weight: 700;
+
+    color: ${(props) => props.theme["gray-900"]};
+  }
+
+  span {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  button {
+    padding: 1rem 2rem;
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    align-items: center;
+    justify-content: center;
 
-    max-width: 25rem;
+    border: none;
+    border-radius: 40px;
+    background-color: ${(props) => props.theme.pink};
+    color: ${(props) => props.theme.white};
 
-    h1{
-        font-size: 2.5rem;
-        line-height: 52px;
-        font-weight: 700;
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 14px;
 
-        color: ${(props) => props.theme["gray-900"]};
-    }
+    max-width: 16rem;
+  }
+  @media screen and (max-width: 900px) {
+    
+  h1 {
+    font-size: 1.8rem;
+    line-height: 39px;
+    font-weight: 700;
 
-    span {
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 24px;
-    }
-
-    button {
-        padding: 1rem 2rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        border: none;
-        border-radius: 40px;
-        background-color: ${(props) => props.theme.pink};
-        color: ${(props) => props.theme.white};
-
-        font-size: .85rem;
-        font-weight: 700;
-        line-height: 14px;
-
-        max-width: 16rem;
-    }
-`
+    color: ${(props) => props.theme["gray-900"]};
+  }
+  }
+`;

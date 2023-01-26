@@ -13,7 +13,7 @@ export function Contato() {
 
   return (
     <ContainerContato>
-      <ContentContact>
+      <ContentContact data-aos="fade-up">
         <h1>Entre em contato com a gente!</h1>
         <span>R.Taltalta, 234</span>
         <span>contato@contato.com</span>
