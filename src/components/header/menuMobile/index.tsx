@@ -6,7 +6,10 @@ import { AiOutlineInstagram } from "react-icons/ai";
 import { FiFacebook } from "react-icons/fi";
 import { AiOutlineYoutube } from "react-icons/ai";
 
-import Link from 'next/link'
+import { NAV_LINKS } from "../../../utils/NAV_LINKS";
+import { Link } from "react-scroll";
+
+import { animateScroll as scroll } from "react-scroll";
 
 interface MenuMobileProps {
   menuIsVisible: boolean;
@@ -17,28 +20,51 @@ export function MenuMobile({
   menuIsVisible,
   setMenuIsVisible,
 }: MenuMobileProps) {
-
   function contact() {
     window.open(
       "https://api.whatsapp.com/send/?phone=551197363973&text&type=phone_number&app_absent=0"
     );
   }
+  function handleClick() {
+    scroll.scrollToTop();
+    setMenuIsVisible(false);
+  }
+
   return (
     <Container isVisible={menuIsVisible}>
       <IoClose onClick={() => setMenuIsVisible(false)} size={25} />
-          <h1>Julia</h1>
+      <h1>Julia</h1>
       <nav>
         <ul>
-          <li>Início</li>
-          <li>Sobre</li>
-          <li>Serviços</li>
-          <li>Depoimentos</li>
+          <li id="inicio" onClick={handleClick}>
+            Inicio
+          </li>
+          {NAV_LINKS.map((itens) => {
+            return (
+              <Link
+                key={itens.id}
+                to={itens.title}
+                smooth={true}
+                offset={200}
+                duration={500}
+                onClick={() => setMenuIsVisible(false)}
+              >
+                {itens.title}
+              </Link>
+            );
+          })}
         </ul>
         <button onClick={contact}>AGENDE SUA CONSULTA</button>
         <ContainerIcons>
-          <Link href={'/'}><AiOutlineInstagram /></Link>
-          <Link href={'/'}><FiFacebook /></Link>
-          <Link href={'/'}><AiOutlineYoutube /></Link>
+          <a href={"/"}>
+            <AiOutlineInstagram />
+          </a>
+          <a href={"/"}>
+            <FiFacebook />
+          </a>
+          <a href={"/"}>
+            <AiOutlineYoutube />
+          </a>
         </ContainerIcons>
       </nav>
     </Container>

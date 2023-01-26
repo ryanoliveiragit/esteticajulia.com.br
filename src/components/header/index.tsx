@@ -1,5 +1,6 @@
-import { ContainerHeader, ContainerIcons, TitleJu, TitleLia } from "./style";
+import { ContainerHeader, TitleJu, TitleLia } from "./style";
 import { RxHamburgerMenu } from "react-icons/rx";
+
 import { NAV_LINKS } from "../../utils/NAV_LINKS";
 import { Link } from "react-scroll";
 
@@ -23,7 +24,7 @@ export function Header({ setMenuIsVisible }: any) {
           <TitleLia>lia</TitleLia>
         </div>
         <ul>
-          <li onClick={handleClick}>Inicio</li>
+          <li id="inicio" onClick={handleClick}>Inicio</li>
           {NAV_LINKS.map((itens) => {
             return (
                 <Link

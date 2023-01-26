@@ -54,6 +54,8 @@ export const Container = styled.div`
       gap: 3rem;
 
       color: ${(props) => props.theme.white};
+
+      
     }
 
     div {

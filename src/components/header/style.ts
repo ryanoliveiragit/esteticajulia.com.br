@@ -34,8 +34,13 @@ export const ContainerHeader = styled.header`
       display: flex;
       gap: 32px;
       list-style: none;
-
-      li,a{
+      @media only screen and (max-width: 900px) {
+        #inicio {
+          display: none;
+        }
+      }
+      li,
+      a {
         list-style: none;
         position: relative;
         text-decoration: none;
@@ -45,7 +50,8 @@ export const ContainerHeader = styled.header`
 
         color: ${(props) => props.theme.pink};
 
-        li,a {
+        li,
+        a {
           list-style: none;
           text-decoration: none;
           color: ${(props) => props.theme.pink};
