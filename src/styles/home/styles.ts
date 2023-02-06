@@ -99,7 +99,9 @@ export const ContainerImage = styled.div`
   justify-content: center;
   display: flex;
   img {
+
     width: 100%;
+    border-radius: 40px;
   }
   @media screen and (max-width: 500px) {
     img {
