@@ -17,7 +17,7 @@ import {
 import { defaultTheme } from "../styles/themes/default";
 
 import Image from "next/image";
-import Modelo from "../assets/modelo.svg";
+import Modelo from "../assets/juliaimg.png";
 import { Servicos } from "../components/serviços";
 import { MyContext } from "../components/context/MyContext";
 import { Sobre } from "../components/sobre";
@@ -35,7 +35,7 @@ export default function Home() {
 
   function contact() {
     window.open(
-      "https://api.whatsapp.com/send/?phone=551197363973&text&type=phone_number&app_absent=0"
+      "https://api.whatsapp.com/send/?phone=5511973639735&text&type=phone_number&app_absent=0"
     );
   }
 
@@ -51,33 +51,33 @@ export default function Home() {
           <ContainerHome>
             <ContainerBoasVindas>
               <span>BOAS-VINDAS 👋</span>
-              <h1>Essência da beleza natural</h1>
+              <h1>O cuidado que você merece</h1>
               <p>
-                De ao seu corpo o cuidado que ele realmente merece! Com
-                perfeccionismo e dedicação
+                Tratamentos personalizados de acordo com suas necessidades, com
+                muita dedicação e resultados!
               </p>
               <button onClick={contact}>AGENDE SUA CONSULTA</button>
             </ContainerBoasVindas>
 
             <ContainerImage>
-              <Image src={Modelo} alt="modelo" width={520} />
+              <Image src={Modelo} alt="modelo" width={450} />
             </ContainerImage>
           </ContainerHome>
 
           <SectionNumbers>
             <div>
-              <Number>+3.500</Number>
+              <Number>+500</Number>
               <span>Pacientes atendidos</span>
               <Divider />
             </div>
             <div>
-              <Number>+15</Number>
-              <span>Especialistas disponíveis</span>
+              <Number>+10</Number>
+              <span>Tratamentos disponíveis</span>
               <Divider />
             </div>
             <div>
-              <Number>+10</Number>
-              <span>Anos no mercado</span>
+              <Number>+4</Number>
+              <span>Anos na área da beleza</span>
             </div>
           </SectionNumbers>
         </Container>

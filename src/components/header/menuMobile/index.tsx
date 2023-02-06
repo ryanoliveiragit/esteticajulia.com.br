@@ -22,7 +22,7 @@ export function MenuMobile({
 }: MenuMobileProps) {
   function contact() {
     window.open(
-      "https://api.whatsapp.com/send/?phone=551197363973&text&type=phone_number&app_absent=0"
+      "https://api.whatsapp.com/send/?phone=5511973639735&text&type=phone_number&app_absent=0"
     );
   }
   function handleClick() {

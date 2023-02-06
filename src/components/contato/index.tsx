@@ -8,6 +8,7 @@ import "aos/dist/aos.css";
 
 import { GoLocation } from "react-icons/go";
 import { MdOutlineMail } from "react-icons/md";
+import { AiOutlineInstagram } from "react-icons/ai";
 
 export function Contato() {
   useEffect(() => {
@@ -15,7 +16,7 @@ export function Contato() {
   }, []);
   function contact() {
     window.open(
-      "https://api.whatsapp.com/send/?phone=551197363973&text&type=phone_number&app_absent=0"
+      "https://api.whatsapp.com/send/?phone=5511973639735&text&type=phone_number&app_absent=0"
     );
   }
   return (
@@ -23,12 +24,12 @@ export function Contato() {
       <ContentContact data-aos="fade-up">
         <h1>Entre em contato com a gente!</h1>
         <div>
-          <GoLocation size={20}/>
-          <span>R.Taltalta, 234</span>
+          <AiOutlineInstagram size={20}/>
+          <a href="https://www.instagram.com/juliamangiaestetica/" target="_blank">@juliamangiaestetica</a>
         </div>
         <div>
           <MdOutlineMail size={20}/>
-          <span>contato@contato.com</span>
+          <span>Juliamangia.contato@gmail.com</span>
         </div>
         <button onClick={contact}>AGENDE SUA CONSULTA</button>
       </ContentContact>

@@ -59,7 +59,9 @@ export const ContentContact = styled.div`
     font-weight: 400;
     line-height: 24px;
   }
-
+  a {
+    color: ${(props) => props.theme["gray-900"]};
+  }
   button {
     padding: 1rem 2rem;
     display: flex;

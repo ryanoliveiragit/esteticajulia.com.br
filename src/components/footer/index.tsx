@@ -12,9 +12,9 @@ export function Footer() {
         <p>Todos direitos reservados</p>
       </ContentFooter>
       <IconsContainer>
-        <AiOutlineInstagram />
-        <FiFacebook />
-        <AiOutlineYoutube />
+         <a href="https://www.instagram.com/juliamangiaestetica/" target="_blank"><AiOutlineInstagram /></a>
+         <a href="https://www.instagram.com/juliamangiaestetica/" target="_blank"><FiFacebook /></a>
+         <a href="https://www.instagram.com/juliamangiaestetica/" target="_blank"><AiOutlineYoutube /></a>
       </IconsContainer>
     </ContainerFooter>
   );

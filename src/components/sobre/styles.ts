@@ -18,7 +18,7 @@ export const ContainerSobre = styled.div`
 
 `;
 export const ContentSobre = styled.div`
-  padding: 10rem 0rem;
+  padding: 10rem 7.75rem;
   align-items: center;
   display: flex;
   gap: 4.1rem;

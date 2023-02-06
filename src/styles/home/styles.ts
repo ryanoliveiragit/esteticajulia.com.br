@@ -99,13 +99,13 @@ export const ContainerImage = styled.div`
   justify-content: center;
   display: flex;
   img {
-
-    width: 100%;
     border-radius: 40px;
   }
   @media screen and (max-width: 500px) {
     img {
-      margin-top: -6rem;
+      height: 24rem;
+      width: 95%;
+      margin-top: -1rem;
       z-index: -1;
     }
   }
@@ -114,7 +114,7 @@ export const SectionNumbers = styled.div`
 max-width: 100rem;
   margin-top: -3rem;
   @media only screen and (max-width: 900px) {
-    margin-top: -8rem;
+    margin-top: -5rem;
   }
   flex: 1;
   display: flex;

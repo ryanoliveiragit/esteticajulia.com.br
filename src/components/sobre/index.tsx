@@ -1,7 +1,7 @@
 import { ContentSobre } from "./styles";
 import { ContainerSobre } from "./styles";
 import Image from "next/image";
-import Modelo from '../../assets/tratamento.jpeg'
+import Modelo from '../../assets/produtos.jpg'
 import { useEffect } from "react";
 
 import AOS from "aos";
@@ -16,7 +16,7 @@ export function Sobre() {
   return (
     <ContainerSobre>
       <ContentSobre>
-      <Image data-aos="fade-up" src={Modelo} alt="modelo" width={600} />
+      <Image data-aos="fade-up" src={Modelo} alt="modelo" width={470} />
         <section id="Sobre" data-aos="fade-up">
           <span>SOBRE NÓS</span>
           <h1>Entenda quem somos e por que existimos</h1>
